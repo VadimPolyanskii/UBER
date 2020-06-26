@@ -1,0 +1,466 @@
+header
+	position: relative
+	height: 50px
+
+nav
+	position: fixed
+	width: 100%
+	height: 50px
+	background-color: #292929       // не меняй цвет, это меню. Иначе не будут видны разделители.
+	z-index: 5
+
+
+.hamburger 
+	display: none		// убираем меню "гамбургер" для тех, кто смотрит сайт с разрешением выше чем от 576 до 767 пикселей (не со мтартфона)
+
+.menu
+	display: flex
+	justify-content: space-between
+	padding: 13px 25px
+	margin: 0
+	list-style-type: none
+	
+	&_link
+		color: #ffffff
+		font-size: 15px
+		font-weight: 300
+	
+	&_item
+		border-right: 2px dotted black      // создаём разделитель справа пунктиром в меню 
+		padding-right: 38px					// отступ справа от разделительной полоски в меню
+		&:last-child						// пс.элемент 
+			border-right: none		// убираем крайний разделитель справа, тк его нет в макете, псевдо-эл.
+
+
+.subheader
+	position: absolute
+	top: 50px
+	width: 100%
+	height: 84px
+	background-color: rgba(0, 0, 0, 0.6)
+  	
+	&_logo
+		display: block
+		max-width: 100%
+		margin-top: 16px
+  		
+	&_official
+		margin-top: 6px
+		opacity: 0.5
+		color: #ffffff
+		font-size: 13px
+		font-weight: 400
+  		
+	&_call
+		color: #ffffff
+		font-size: 12px
+		font-weight: 300
+		margin-top: 19px
+		text-align: right
+  		
+	&_phone
+		display: block
+		margin-top: 8px
+		color: #ffffff
+		font-size: 22px
+		font-weight: 400
+		text-transform: uppercase
+		text-align: right
+		line-height: 12px
+  		
+	&_btn
+		margin-top: 19px
+		width: 172px
+		height: 46px
+		box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
+		border: none
+		border-radius: 4px
+		background-image: linear-gradient(to top, $main-color 0%, $main-color 100%)
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+		color: #ffffff
+		font-size: 14px
+		font-weight: 400
+		text-transform: uppercase
+		+btn_hover
+
+		
+
+.promo
+	min-height: 800px
+	background: url('../img/bg/mers_bg.jpg') center (center / cover) no-repeat
+	padding: 150px 0 135px 0
+  		
+	&_header
+		color: #ffffff
+		font-weight: 700
+		text-transform: uppercase
+		font-size: 60px
+		line-height: 60px
+		margin: 0
+		text-align: center
+  	
+	&_subheader
+		color: #ffffff
+		font-weight: 700
+		text-transform: uppercase
+		font-size: 36px
+		line-height: 36px
+		margin: 0
+		margin-top: 22px
+		text-align: center
+  	
+	&_descr
+		color: #ffffff
+		font-size: 18px
+		font-weight: 400
+		line-height: 24px
+		text-align: center
+		margin-top: 23px
+  	
+	&_btn
+		display: block
+		margin: 118px auto 0 auto
+		width: 259px
+		height: 63px
+		box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12)
+		border: none
+		border-radius: 4px
+		background-image: linear-gradient(to top, $main-color 0%, $main-color 100%)
+		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
+		color: #ffffff
+		font-size: 18px
+		font-weight: 400
+		text-transform: uppercase
+		+btn_hover
+		
+		
+
+
+.label
+	position: relative
+	margin: 0 auto
+	height: 24px
+	width: 112px
+	padding: 5px 12px
+	background-color: $black-color
+	color: #fff
+	font-size: 11px
+	font-weight: 300
+	text-transform: uppercase
+	text-align: center
+	z-index: 2
+
+	&_white
+		background-color: #fff
+		color: $black-color
+		
+
+.title
+	position: relative
+	margin-bottom: 0
+	margin-top: 38px
+	color: $black-color
+	font-size: 38px
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+	z-index: 2
+
+	&_white
+		color: #fff
+
+.subtitle
+	position: relative
+	margin-top: 10px
+	color: $black-color
+	font-size: 17px
+	font-weight: 400
+	text-align: center
+	z-index: 2
+
+	&_white
+		color: #ffffff
+
+.reasons
+	padding: 71px 0 65px 0
+		
+	&_block
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 35px
+  	
+	&_round
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 26px											// отступ справа в левую сторону для красоты
+		width: 113px
+		height: 113px
+		background-color: $main-color
+		border-radius: 100%
+	
+	&_descr
+		width: 343px
+		
+	&_subtitle
+		line-height: 21px
+		color: $main-color
+		font-size: 17px
+		font-weight: 400
+	
+	&_text
+		color: $black-color
+		font-size: 15px
+		font-weight: 300
+		line-height: 21px
+
+
+.mobile
+	min-height: 864px
+	padding: 48px 0 79px 0
+	
+	.row
+		margin-top: 32px
+	
+	&_item
+		position: relative
+		width: 320px
+		height: 280px
+		margin: 0 auto
+		margin-bottom: 19px
+		padding-top: 92px
+		
+		&_1
+			background: url('../img/bg/mobile_screen_1.jpg') center (center/cover) no-repeat
+		
+		&_2
+			background: url('../img/bg/mobile_screen_2.jpg') center (center/cover) no-repeat
+		
+		&_3
+			background: url('../img/bg/mobile_screen_3.jpg') center (center/cover) no-repeat
+		
+		&_4
+			background: url('../img/bg/mobile_screen_4.jpg') center (center/cover) no-repeat
+		
+		&_5
+			background: url('../img/bg/mobile_screen_5.jpg') center (center/cover) no-repeat
+		
+		&_6
+			background: url('../img/bg/mobile_screen_6.jpg') center (center/cover) no-repeat
+		
+		&_subtitle
+			color: #ffffff
+			font-size: 24px
+			font-weight: 400
+			line-height: 31p
+			text-transform: uppercase
+			text-align: center
+		
+		&_plus
+			display: flex
+			justify-content: center
+			align-items: center
+			position: absolute
+			bottom: 35px
+			left: 50%		// 
+			transform: translateX(-50%)
+			width: 26px
+			height: 26px
+			background-color: $black-color
+			margin: 0 auto	
+			border-radius: 100%
+			cursor: pointer
+			&:before
+				content: ''
+				display: block
+				width: 14px
+				height: 2px
+				background-color: $main-color
+				transition: 0.3s all
+			&:after
+				content: ''
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				display: block
+				width: 3px
+				height: 14px
+				background-color: $main-color
+				transition: 0.3s all
+			&:hover
+				&:before, &:after
+					background-color: $second-color
+
+
+
+.choice
+	position: relative
+	min-height: 895px
+	padding: 57px 0 138px 0
+	background: url('../img/bg/greed.png') center (center / cover) no-repeat
+
+	&_img 
+		position: relative
+		display: block
+		margin: 56px auto 0 auto
+		z-index: 2
+
+	&_descr
+		text-align: center
+		color: $black-color
+		font-size: 17px
+		font-weight: 300
+		line-height: 24px
+
+	.black 
+		position: absolute 
+		top: 0
+		left: 0
+		height: 499px
+		width: 100%
+		background-color: $black-color
+		z-index: 1
+
+.require
+	padding: 68px 0 84px 0  // создаём внутренние отступы для контента по вертикали, оставляем 0 по горизонтали
+	&_block
+		margin: 33px 0  // создаём отступы для блока по вертикали и нулевые по горизонтали
+		&_nmb
+			margin-bottom: 0px  // отключаем наружный отступ снизу у блока с доп.классом nmb (none margin bottom)
+	&_title
+		color:  $main-color
+		font-size: 22px
+		font-weight: 400
+	&_list
+		list-style-type: none  // убираем маркеры-кружки у списков
+		padding-left: 50px    // задаём отступ текста вправо от левого края
+		margin-top: 22px  // отодвигаем список от заголовка
+		li
+			position: relative		// создаём опорную точку для абсолютного спозиционированных иконок (ниже в before)
+			font-size: 17px
+			font-weight: 300
+			line-height: 24px
+			margin-bottom: 10px  // задаём отступ снизу для строчек
+			&:before
+				position: absolute	// задаём абсолютное позиц. для иконок
+				left: -31px		// сдвигаем иконки на 10px влево + 21px ширина самой иконки (итого 31px)
+				top: 3px		// сдвигаем иконкина 3px сверху
+				content: ''		// обязательное свойство для псевдоэлементов, без него не сработает.
+				display: block	// создаём блочный элемент для видимости его в инспекторе кода.
+				width: 21px		// задаём ширину блоку (картинке "галочке") из макета
+				height: 20px	// то же самое с высотой
+				background-color:  $main-color
+				background: url('../icons/check_blue.png') center (center/cover) no-repeat  // путь к синей галочке
+
+	&_descr
+		margin-top: 25px
+		font-size: 17px
+		font-weight: 300
+		line-height: 24px
+		color: #1ca8c3
+
+	
+	.warning
+		.require_title		// здесь в классе warning поменяется цвет заголовка с классом .require_title
+			color: $second-color
+		.require_list		// здесь в классе warning поменяется цвет списка и иконки.
+			li 
+				&:before				// ставим галочку перед текстом
+					background: url('../icons/check_red.png') center (center/cover) no-repeat	// путь к красной галочке
+
+.world
+	position: relative
+	padding: 49px 0 20px 0
+	min-height: 717px
+	background: url('../img/bg/world.png') center (center/cover) no-repeat
+
+	&_city
+		position: absolute
+		left: 774px
+		top: 627px
+		color:  $main-color
+		font-size: 15px
+		font-weight: 400
+		text-transform: uppercase
+
+.footer
+	&_divider
+		width: 299px
+		height: 4px
+		background-color:  $main-color
+		margin: 0 auto						// размещаем блочный элемент посередине
+		margin-top: 25px				// наружный отступ сверху от этого элемента
+	
+	&_wrapper
+		display: flex 
+		justify-content: space-between
+		align-items: flex-start
+		padding: 20px					// отступ внутрь со всех сторон от края блока до контента 
+		padding-top: 32px					//  отступ сверху
+	
+	&_wrapper > div 
+		width: 33%						// задаём ширину всем div-ам без определённого класса
+		&:nth-child(3)					// псевдоэлемент - задаёт следующие свойства каждому 3-му div без класса в классе footer_wrapper
+			display: flex 
+			justify-content: flex-end
+	
+	&_social
+		width: 170px					// ширина блока, внутри которого ссылки на соц.медиа
+		display: flex
+		justify-content: space-between
+		a 
+			text-decoration: none			// убираем подчёркивание у ссылок на соц.сети
+		
+		&_item 								// делаем блок ссылки черным кружком, в котором будут иконки соц.медиа 
+			display: flex 					// выравниваем иконку внутри чёрного кружка
+			justify-content: center
+			align-items: center
+			margin: 0 5px 					// задаём расстояние между иконками
+			width: 32px
+			height: 32px
+			background-color: #070716
+			border-radius: 100%						// задаём блоку форму круга
+			i 
+				color: #fff					// красим иконки соц.медиа в белый цвет.
+	
+	&_links
+		width: 390px
+		margin: 0 auto								// размещаем блок посередине страницы
+		
+		&_main 
+			display: flex 						// размещаем контент внутри блока footer_links_main
+			justify-content: space-between
+			padding: 0 10px						// задаём внутренний отступ по бокам блоку footer_links_main до контента
+			a 
+				color: #070716
+				font-size: 15px
+				font-weight: 300
+				text-transform: uppercase
+		
+		&_sub 
+			display: flex 
+			justify-content: space-between
+			margin-top: 10px						// наружный отступ от верхнего края блока. Можно комбинировать это свойство с flex-ами
+			a 
+				color: #999999
+				font-size: 11px
+				font-weight: 300
+				text-transform: uppercase			// делаем текст заглавными буквами
+		&_lang 
+			display: block 					// делаем ссылку блоком, чтобы можно было двигать
+			margin: 0 auto				// размещаем блок посередине страницы
+			color:  $main-color
+			font-size: 11px
+			font-weight: 400
+			margin-top: 19px					// наружный отступ сверху 
+			text-transform: uppercase
+			text-align: center					// выравниваем текст по центру внутри блока ссылки
+
+	&_mobile
+		a 
+			margin: 0 5px 					// задаём расстояние между иконками магазинов справа
+			text-decoration: none			// убираем подчёркивание у ссылок на мобил.приложения
+
+.xs-visible 								// задаём общие стили для этого блока
+	display: none							// пишем, что на больших разрешениях у него будет display: none
